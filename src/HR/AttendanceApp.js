@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import moment from "moment-jalaali";
-moment.loadPersian({ dialect: 'persian-modern' }); // اضافه کردن این خط
+moment.loadPersian({ dialect: "persian-modern" }); // اضافه کردن این خط
 
 const AttendanceTable = () => {
   const [attendanceData, setAttendanceData] = useState([]);
@@ -176,7 +176,9 @@ const AttendanceTable = () => {
 
   return (
     <div className="container">
-      <h2 className="d-flex justify-content-center py-2">جدول حضور و غیاب - اردیبهشت 1404</h2>
+      <h2 className="d-flex justify-content-center py-2">
+        جدول حضور و غیاب - اردیبهشت 1404
+      </h2>
       <div
         style={{
           display: "flex",
@@ -188,8 +190,10 @@ const AttendanceTable = () => {
         <button
           type="button"
           onClick={() => {
-            localStorage.clear("attendanceData");
-            window.location.reload();
+            if (window.confirm("کل صفحه پاک میشود !!")) {
+              localStorage.clear("attendanceData");
+              window.location.reload();
+            } else return;
           }}
         >
           پاکسازی
@@ -207,8 +211,7 @@ const AttendanceTable = () => {
             setAttendanceData(newData);
           }}
         >
-          علامت‌گذاری همه   
-
+          علامت‌گذاری همه
         </button>
 
         <button
@@ -316,7 +319,7 @@ const AttendanceTable = () => {
             setAttendanceData(newData);
           }}
         >
-صبح 8 ساعته
+          صبح 8 ساعته
         </button>
 
         <button
@@ -331,7 +334,7 @@ const AttendanceTable = () => {
             setAttendanceData(newData);
           }}
         >
-عصر 8 ساعته
+          عصر 8 ساعته
         </button>
 
         <button
@@ -346,7 +349,7 @@ const AttendanceTable = () => {
             setAttendanceData(newData);
           }}
         >
-صبح 11 ساعته
+          صبح 11 ساعته
         </button>
 
         <button
@@ -361,7 +364,7 @@ const AttendanceTable = () => {
             setAttendanceData(newData);
           }}
         >
-عصر 11 ساعته
+          عصر 11 ساعته
         </button>
 
         <button
@@ -376,7 +379,7 @@ const AttendanceTable = () => {
             setAttendanceData(newData);
           }}
         >
-عصر 11 ساعته - 2
+          عصر 11 ساعته - 2
         </button>
       </div>
       <table className="table table-striped mt-3">
