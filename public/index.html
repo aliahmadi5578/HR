@@ -2,13 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.ico" />
+    <!-- <link rel="icon" href="./favicon.ico" /> -->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Helium Cafe Panel" />
+    <meta name="description" content="Helium HR Panel" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <title>HR</title>
+    <title>پنل ثبت ورود و خروج</title>
     <script defer="defer" src="%PUBLIC_URL%/static/js/main.ce0dcc0d.js"></script>
+    <script type="text/javascript">
+      // پردازش ریدایرکت از 404.html
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <link href="%PUBLIC_URL%/static/css/main.83fc0959.css" rel="stylesheet" />
   </head>
   <body id="body">
