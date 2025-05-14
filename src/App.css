@@ -1,0 +1,516 @@
+@font-face {
+  font-family: iranSans;
+  src: url(../public/fonts/IRANSansWeb\(FaNum\).ttf);
+}
+@font-face {
+  font-family: iranSansBold;
+  src: url(../public/fonts/IRANSansWeb\(FaNum\)_Bold.ttf);
+}
+* {
+  font-family: iranSans;
+  direction: rtl;
+}
+* a {
+  color: white;
+  text-decoration: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.default {
+  cursor: default;
+}
+.dirRtl {
+  direction: rtl;
+}
+.bold {
+  font-family: iranSansBold !important;
+  font-weight: bold;
+}
+
+.loginSection {
+  height: 100vh;
+  background-image: url(http://192.168.11.12:3000/static/media/trampolin.1382216916c61263a3ee.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.loginFormSection {
+  opacity: 0.93;
+  width: 35% !important;
+  min-height: 35vh;
+}
+.loginFormSection h1 {
+  font-size: 22px;
+  font-family: iranSansBold;
+}
+.loginForm input {
+  text-align: right;
+  font-family: iranSansBold;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+  height: 70px;
+  border: solid 2px #ccc;
+}
+.loginForm input:focus {
+  outline: 0;
+  box-shadow: 0px 5px 10px #e7e7e7cc;
+}
+.loginForm span {
+  font-size: 12px;
+  color: red;
+}
+.loginForm button {
+  height: 50px;
+}
+.childrenMainDiv button {
+  height: 50px;
+}
+.fullWidthTextBox {
+  width: -webkit-fill-available !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.copyButton {
+  border: 0px;
+}
+.heliumTable {
+  --bs-table-bg: #fbeaff;
+}
+.heliumTable th,
+td {
+  align-content: center;
+}
+
+.showOrHideButton {
+  position: absolute;
+  border: 0;
+  outline: none;
+}
+
+.__datepicker,
+.__datepicker-theme-blue,
+.__datepicker-theme-mode-light fa {
+  padding: 0;
+}
+
+.darkmode {
+  background-color: rgba(46, 46, 46, 0.932) !important;
+  color: white !important;
+}
+.darkmode input:disabled {
+  color: rgb(216, 216, 216);
+}
+.darkmode .menuMainDiv {
+  background-color: rgb(73, 44, 100) !important;
+}
+.underLine {
+  text-decoration: underline;
+}
+
+@media print {
+  /* All your print styles go here */
+  #cafeRightMenu {
+    display: none;
+  }
+  #noPrint {
+    display: none !important;
+  }
+
+  .bordered {
+    border: 2px solid;
+    padding: 5px;
+    margin-bottom: 3px;
+  }
+
+  .fs-print {
+    font-size: 13px !important;
+  }
+
+  * {
+    font-size: 10px !important;
+    color: black !important;
+  }
+  .ff {
+    font-family: iranSansBold !important;
+  }
+
+  .display-none {
+    display: block !important;
+  }
+}
+.display-none {
+  display: none;
+}
+
+.cafeInput:disabled {
+  background-color: #fbeaff;
+}
+
+.cafeRightMenu {
+  position: fixed;
+  right: 5px;
+  background-color: #e7e7e7;
+  height: 77vh;
+  border-radius: 14px;
+}
+.cafeItemsTitle button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #9c8de5cc;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 0px #cccc;
+  font-weight: bold;
+}
+.cafeItemsTitle button:hover {
+  background-color: #8a7ccdcc;
+}
+.cafeTable {
+  position: fixed;
+  left: 0px;
+  max-height: 77vh;
+  overflow-y: auto;
+}
+.items {
+  max-height: 41vh;
+  overflow-y: auto;
+}
+.items button {
+  width: 85px;
+  height: 85px;
+  font-size: 13px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-around;
+  animation: fadeIn 1.2s;
+}
+
+.items button:nth-child(odd) {
+  background-color: #ff000056;
+}
+.items button:nth-child(even) {
+  background-color: #6f00ff56;
+}
+
+.items button:nth-child(odd):hover {
+  background-color: #ff0000a4;
+}
+.items button:nth-child(even):hover {
+  background-color: #6f00ffa2;
+}
+.activeItem {
+  background-color: #4f4194cc !important;
+  color: rgb(235, 235, 235);
+  font-weight: bold;
+}
+.cafeTopMenu {
+  background-color: #fbeaff;
+}
+.cafeTopMenu a {
+  color: rgba(0, 0, 0, 0.781) !important;
+  padding: 5px;
+}
+.cafeTopMenu a:hover {
+  scale: 1.05;
+  color: rgb(68, 68, 68) !important;
+}
+.textBoxHeight {
+  width: 65px !important;
+  height: 45px !important;
+  text-align: center;
+}
+.cafeInput {
+  width: 200px;
+}
+.cafeSmallInput {
+  width: 75px !important;
+}
+.cafeFooter {
+  position: fixed;
+  bottom: 0;
+  background-color: #fbeaff;
+}
+.spiner {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.fadeBody {
+  opacity: 0.5;
+}
+.scrollUp {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  font-size: 28px !important;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+}
+.__datepicker.fa .__datepicker-input .__datepicker-clear-btn {
+  display: none;
+}
+.tdRed {
+  background-color: red !important;
+}
+.transNo button {
+  background-color: rgb(211, 211, 211);
+  width: 75px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0px 2px 2px #3c3c3c;
+}
+.transNo button:hover {
+  background-color: rgb(187, 187, 187);
+  border-radius: 8px;
+}
+.myAnimate {
+  animation: fadeIn 0.2s;
+}
+.heliumResponsiveTable {
+  width: 75vw;
+}
+.logDate{
+  width: 190px !important;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-height: 865px) {
+  .cafeRightMenu {
+    height: 63vh !important;
+  }
+  .cafeTable {
+    max-height: 63vh;
+  }
+  .items {
+    max-height: 19vh;
+  }
+  .cafeInput {
+    width: 180px !important;
+    height: 50px;
+  }
+  .cafeSmallInput {
+    width: 75px !important;
+  }
+}
+
+@media (max-width: 428px) {
+  .cafeTable {
+    max-height: 45vh;
+  }
+  .items {
+    max-height: 50vh;
+  }
+  .cafeInput {
+    width: 100px !important;
+    height: 40px !important;
+  }
+  .cafeSmallInput {
+    width: 45px !important;
+  }
+  .comment {
+    width: 60vw !important;
+  }
+  body {
+    font-size: 12px;
+  }
+  .cafeRightMenu {
+    position: absolute;
+    top: 50px;
+    height: 100vh !important;
+    z-index: 1;
+  }
+  .textBoxHeight {
+    width: 38px !important;
+  }
+  .addFactorButton,
+  .clear,
+  .returnButton {
+    width: 75px;
+    font-size: 10px;
+  }
+  .heliumResponsiveTable {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .loginFormSection {
+    width: 85% !important;
+    min-height: 40vh;
+  }
+}
+
+@media (min-width: 428px) and (max-width: 768px) {
+  .cafeTable {
+    max-height: 42vh;
+  }
+  .items {
+    max-height: 60vh;
+  }
+  .textBoxHeight {
+    width: 40px !important;
+  }
+  .cafeInput {
+    width: 180px !important;
+    height: 50px !important;
+  }
+  .cafeSmallInput {
+    width: 60px !important;
+  }
+  .comment {
+    width: 70vw !important;
+  }
+  body {
+    font-size: 14px;
+  }
+  .cafeRightMenu {
+    position: absolute;
+    top: 50px;
+    height: 100vh !important;
+    z-index: 1;
+  }
+  .addFactorButton,
+  .clear,
+  .returnButton {
+    width: 85px;
+    font-size: 10px;
+  }
+  .heliumResponsiveTable {
+    width: 90vw;
+  }
+}
+
+@media (min-height: 1px) and (max-height: 680px) {
+  .cafeTable {
+    max-height: 42vh;
+  }
+  .items {
+    max-height: 60vh;
+  }
+  .textBoxHeight {
+    width: 40px !important;
+  }
+  .cafeInput {
+    width: 180px !important;
+    height: 50px !important;
+  }
+  .cafeSmallInput {
+    width: 60px !important;
+  }
+  .comment {
+    width: 70vw !important;
+  }
+  body {
+    font-size: 14px;
+  }
+  .cafeRightMenu {
+    position: absolute;
+    top: 50px;
+    height: 100vh !important;
+    z-index: 1;
+  }
+  .addFactorButton,
+  .clear,
+  .returnButton {
+    width: 85px;
+    font-size: 10px;
+  }
+  .heliumResponsiveTable {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 768px) {
+  .cafeTable {
+    width: 100%;
+    max-height: 50vh;
+  }
+  .items {
+    max-height: 42vh;
+  }
+  .textBoxHeight {
+    width: 40px !important;
+  }
+  .cafeInput {
+    width: 120px !important;
+    height: 50px !important;
+  }
+  .cafeSmallInput {
+    width: 70px !important;
+  }
+  .comment {
+    width: 40vw !important;
+  }
+  body {
+    font-size: 14px;
+  }
+  .cafeRightMenu {
+    position: absolute;
+    top: 50px;
+    height: 95vh !important;
+    z-index: 1;
+  }
+  .addFactorButton,
+  .clear,
+  .returnButton {
+    width: 150px;
+  }
+  .heliumResponsiveTable {
+    width: 90vw;
+  }
+  .cafeLogRow input {
+    width: 200px;
+  }
+}
+
+
+.inventory-container {
+  padding: 20px;
+}
+
+.add-inventory-form {
+  margin-bottom: 20px;
+}
+
+.add-inventory-form select, .add-inventory-form input {
+  margin: 10px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

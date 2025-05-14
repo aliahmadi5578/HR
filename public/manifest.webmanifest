@@ -1,0 +1,15 @@
+{
+  "short_name": "Helium Cafe Panel",
+  "name": "Helium Cafe Panel",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "208x208",
+      "type": "image/favicon"
+    }
+  ],
+  "start_url": ".",
+  "display": "fullscreen",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
