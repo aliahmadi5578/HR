@@ -8,24 +8,36 @@ const AttendanceTable = () => {
   const [totalMissing, setTotalMissing] = useState(0);
   const [totalSnapBonus, setTotalSnapBonus] = useState(0);
 
+let m = moment();
+
+if (m.jDate() <= 5) {
+  m = m.subtract(1, "jMonth");
+}
+
+const year  = m.format("jYYYY");
+const month = m.format("jMM");
+
+
+
   // ✅ بارگذاری داده‌ها از LocalStorage هنگام mount اولیه
   useEffect(() => {
     const storedData = JSON.parse(localStorage.getItem("attendanceData"));
     if (storedData && storedData.length > 0) {
       setAttendanceData(storedData);
     } else {
-      const daysInMonth = Array.from({ length: 31 }, (_, i) => {
-        const date = moment(`1404/02/${i + 1}`, "jYYYY/jMM/jDD");
-        return {
-          dayNumber: i + 1,
-          date: date.format("jYYYY/jMM/jDD"),
-          dayName: date.format("dddd"), // اینجا نام روز به فارسی تنظیم می‌شود
-          entryTime: "09:45", // ساعت ورود پیش‌فرض
-          exitTime: "17:45", // ساعت خروج پیش‌فرض
-          shiftType: "morning", // پیش‌فرض: شیفت صبح
-          isLeave: false,
-        };
-      });
+      const daysInMonthCount = moment.jDaysInMonth(year, month - 1);
+     const daysInMonth = Array.from({ length: daysInMonthCount }, (_, i) => {
+  const date = moment(`${year}/${month}/${i + 1}`, "jYYYY/jMM/jDD");
+  return {
+    dayNumber: i + 1,
+    date: date.format("jYYYY/jMM/jDD"),
+    dayName: date.format("dddd"),
+    entryTime: "09:45",
+    exitTime: "17:45",
+    shiftType: "morning",
+    isLeave: false,
+  };
+});
 
       setAttendanceData(daysInMonth);
       localStorage.setItem("attendanceData", JSON.stringify(daysInMonth));
@@ -177,7 +189,7 @@ const AttendanceTable = () => {
   return (
     <div className="container">
       <h2 className="d-flex justify-content-center py-2">
-        جدول حضور و غیاب - اردیبهشت 1404
+        جدول حضور و غیاب {year +"/" + month}
       </h2>
       <div
         style={{
